@@ -1,9 +1,20 @@
+import { Logo } from '@/components/Logo';
+import * as S from './styles';
+
 export const Header = () => {
   return (
     <>
-      <header>
-        <h1>Cabeçalho</h1>
-      </header>
+      <S.Container>
+        <Logo />
+
+        <nav>
+          <ul>
+            <li>Inicio</li>
+            <li>Sobre</li>
+            <li>Contato</li>
+          </ul>
+        </nav>
+      </S.Container>
     </>
-  )
-}
+  );
+};
