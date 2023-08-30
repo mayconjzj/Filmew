@@ -1,15 +1,17 @@
 import { List, ListItem } from '@/components/List';
 
-export const Navbar = () => {
+import * as S from './styles';
+
+export const Nav = () => {
   return (
     <>
-      <nav>
+      <S.Container>
         <List>
           <ListItem>Inicio</ListItem>
           <ListItem>Sobre</ListItem>
           <ListItem>Contato</ListItem>
         </List>
-      </nav>
+      </S.Container>
     </>
   );
 };

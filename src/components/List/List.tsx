@@ -1,7 +1,11 @@
+import * as S from './styles';
+
 export const List = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <ul>{children}</ul>
+      <S.List>
+        {children}
+      </S.List>
     </>
   );
 };

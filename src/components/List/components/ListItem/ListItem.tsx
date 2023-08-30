@@ -1,7 +1,9 @@
+import * as S from './styles';
+
 export const ListItem = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <li>{children}</li>
+      <S.ListItem>{children}</S.ListItem>
     </>
   );
 };

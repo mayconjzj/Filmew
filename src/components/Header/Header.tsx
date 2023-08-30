@@ -1,6 +1,7 @@
-import { Navbar } from '@/components/Navbar'
+import { Nav } from '@/components/Nav';
 import { Logo } from '@/components/Logo';
 import * as S from './styles';
+import { fips } from 'crypto';
 
 export const Header = () => {
   return (
@@ -8,7 +9,7 @@ export const Header = () => {
       <S.Container>
         <Logo />
 
-        <Navbar />
+        <Nav />
       </S.Container>
     </>
   );
