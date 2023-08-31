@@ -12,7 +12,7 @@ export default {
     white: '#fff',
     black: '#000',
     gray: '#101010',
-    yellow: '#ffff00'
+    yellow: '#ffdd00'
   },
 
   transition: {

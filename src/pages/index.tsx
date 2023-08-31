@@ -1,3 +1,9 @@
+import { Dashboard } from "@/templates/Dashboard";
+
 export default function Home() {
-  return <>Opa</>;
+  return (
+    <>
+      <Dashboard />
+    </>
+  )
 }
