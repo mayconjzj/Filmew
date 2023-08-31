@@ -1,10 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const ListItem = styled.li`
-  padding: 10px 15px;
-  transition: color 0.3s;
+  ${({ theme }: { theme: any }) => css`
+    padding: ${theme.box.padding};
+    transition: color ${theme.transition.default};
 
-  &:hover {
-    color: #e0d204;
-  }
+    &:hover {
+      color: ${theme.colors.yellow};
+    }
+  `}
 `;

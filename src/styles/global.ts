@@ -10,8 +10,8 @@ const GlobalStyles = createGlobalStyle`
 
   ${({ theme }: { theme: any }) => css`
     body {
-      color: ${theme.colors.font};
-      background-color: ${theme.colors.bg};
+      color: ${theme.colors.white};
+      background-color: ${theme.colors.gray};
     }
   `}
 `;
