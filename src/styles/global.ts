@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
   ${({ theme }: { theme: any }) => css`
     body {
       color: ${theme.colors.white};
-      background-color: ${theme.colors.gray};
+      background-color: ${theme.colors.black};
     }
   `}
 `;

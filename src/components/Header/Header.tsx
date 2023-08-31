@@ -9,7 +9,6 @@ export const Header = () => {
     <>
       <S.Container>
         <Logo />
-
         <Nav items={NavConfig.items} />
       </S.Container>
     </>

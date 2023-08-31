@@ -7,7 +7,7 @@ export const Container = styled.header`
   align-items: center;
 
   ${({ theme }: { theme: any }) => css`
-    background-color: ${theme.colors.black};
+    background-color: rgba(0, 0, 0, 0);
     padding: ${theme.box.padding};
   `}
 `;

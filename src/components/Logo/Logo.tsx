@@ -4,7 +4,9 @@ export const Logo = () => {
   return (
     <>
       <S.Container>
-        <S.Logo>LOGO</S.Logo>
+        <S.Logo>
+          FILME<S.W>W</S.W>
+        </S.Logo>
       </S.Container>
     </>
   );
