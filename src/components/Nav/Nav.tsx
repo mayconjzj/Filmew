@@ -27,6 +27,16 @@ export const Nav = ({ items }: NavType) => {
           handleToggleMenu={handleToggleMenu}
         />
       </S.Content>
+
+      <S.NavMobile isOpenMenu={isOpenMenu}>
+        <S.ListMobile>
+          {items.map((item) => (
+            <ListItem key={item.title}>
+              <Link href={item.href}>{item.title}</Link>
+            </ListItem>
+          ))}
+        </S.ListMobile>
+      </S.NavMobile>
     </>
   );
 };
