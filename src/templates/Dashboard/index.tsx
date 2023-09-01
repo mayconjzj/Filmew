@@ -18,7 +18,6 @@ export const Dashboard = () => {
           <article>Filme 2</article>
         </S.Content>
       </Main>
-      )
     </>
   );
 };
