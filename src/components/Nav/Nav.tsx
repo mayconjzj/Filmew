@@ -1,7 +1,7 @@
 import { List, ListItem } from '@/components/List';
 import { Link } from '@/components/Link';
 import { NavType } from '@/models';
-import { ToggleButton } from './components';
+import { ToggleButton, ListMobile } from './components';
 import { useNav } from './hooks';
 
 import * as S from './styles';
@@ -29,13 +29,13 @@ export const Nav = ({ items }: NavType) => {
       </S.Content>
 
       <S.NavMobile isOpenMenu={isOpenMenu}>
-        <S.ListMobile>
+        <ListMobile>
           {items.map((item) => (
             <ListItem key={item.title}>
               <Link href={item.href}>{item.title}</Link>
             </ListItem>
           ))}
-        </S.ListMobile>
+        </ListMobile>
       </S.NavMobile>
     </>
   );

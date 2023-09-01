@@ -17,6 +17,10 @@ svg:focus {
   outline: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
   ${({ theme }: { theme: Theme }) => css`
     body {
       color: ${theme.colors.white};

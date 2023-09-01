@@ -1,16 +1,17 @@
 export default {
   border: {
-    radius: '0.4rem'
+    radius: '10px'
   },
 
   box: {
-    shadow: '0 8px 8px rgba(0, 0, 0, 0.08)',
+    shadow: '0 8px 8px rgba(0, 0, 0, 0.3)',
     padding: '10px 15px'
   },
 
   colors: {
     white: '#fff',
     black: '#000',
+    black2: '#090909',
     gray: '#101010',
     yellow: '#ffdd00'
   },

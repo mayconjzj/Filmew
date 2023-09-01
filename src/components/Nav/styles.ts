@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 export const Nav = styled.nav`
   display: block;
@@ -18,29 +18,29 @@ export const Content = styled.div`
 `;
 
 export const NavMobile = styled.nav<{ isOpenMenu: boolean }>`
-  ${({ isOpenMenu }) => css`
+  ${({ isOpenMenu, theme }) => css`
     display: none;
 
     @media (max-width: 600px) {
       display: flex;
-      visibility: ${isOpenMenu ? 'visible' : 'hidden'};
-      overflow: ${isOpenMenu ? 'auto' : 'hidden'};
+      visibility: hidden;
       position: absolute;
-      background-color: #090909;
-      padding: 10px;
+      background-color: ${theme.colors.black2};
+      padding: ${theme.box.padding};
       padding-top: 25px;
-      border-radius: 10px;
+      border-radius: ${theme.border.radius};
+      box-shadow: ${theme.box.shadow};
       right: 0;
       top: 0;
-      width: 50vw;
+      width: 0;
       height: 100%;
+      transition: ${theme.transition.default};
+
+      ${isOpenMenu &&
+      `
+        width: 50vw;
+        visibility: visible;
+      `}
     }
   `}
-`;
-
-export const ListMobile = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  list-style: none;
 `;
