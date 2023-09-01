@@ -3,7 +3,7 @@ import { NavType } from '@/models';
 export const NavConfig: NavType = {
   items: [
     {
-      title: 'Inicio',
+      title: 'Home',
       href: '/'
     },
     {
