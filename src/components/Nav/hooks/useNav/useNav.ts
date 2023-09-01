@@ -5,7 +5,7 @@ export const useNav = () => {
 
   const handleToggleMenu = useCallback(() => {
     setIsOpenMenu((prevState) => !prevState);
-  }, []);
+  }, [isOpenMenu]);
 
   return {
     isOpenMenu,
