@@ -1,13 +1,13 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.header`
-  height: 50px;
-  display: flex; 
+  min-height: 50px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: transparent;
 
-  ${({ theme }: { theme: any }) => css`
-    background-color: rgba(0, 0, 0, 0);
+  ${({ theme }) => css`
     padding: ${theme.box.padding};
   `}
 `;

@@ -1,3 +1,4 @@
+import { Theme } from '@/models';
 import { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle` 
@@ -8,7 +9,15 @@ const GlobalStyles = createGlobalStyle`
   font-family: 'Montserrat';
 }
 
-  ${({ theme }: { theme: any }) => css`
+svg {
+  border: none;
+}
+
+svg:focus {
+  outline: none;
+}
+
+  ${({ theme }: { theme: Theme }) => css`
     body {
       color: ${theme.colors.white};
       background-color: ${theme.colors.black};

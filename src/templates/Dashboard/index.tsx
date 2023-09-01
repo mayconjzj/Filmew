@@ -1,4 +1,5 @@
 import { Main } from '@/components/Main';
+import { Nav } from '@/components/Nav';
 
 import * as S from './styles';
 
@@ -13,11 +14,12 @@ export const Dashboard = () => {
           <article>Filme 2</article>
         </S.Content>
         <S.Content>
-        <h2>Comédia</h2>
+          <h2>Comédia</h2>
           <article>Filme 1</article>
           <article>Filme 2</article>
         </S.Content>
       </Main>
+      )
     </>
   );
 };
