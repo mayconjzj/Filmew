@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
   margin: 0;
   padding: 0;
   border-box: box-sizing;
-  font-family: 'Montserrat';
+  font-family: Arial;
 }
 
 svg {
