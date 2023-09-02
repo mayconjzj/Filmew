@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Nav = styled.nav`
   display: block;
@@ -24,23 +24,23 @@ export const NavMobile = styled.nav<{ isOpenMenu: boolean }>`
     @media (max-width: 600px) {
       display: flex;
       visibility: hidden;
+      overflow-x: hidden;
       position: absolute;
       background-color: ${theme.colors.black2};
       padding: ${theme.box.padding};
       padding-top: 25px;
+      padding-bottom: 25px;
       border-radius: ${theme.border.radius};
       box-shadow: ${theme.box.shadow};
       right: 0;
       top: 0;
       width: 0;
-      height: 100%;
       transition: ${theme.transition.default};
 
-      ${isOpenMenu &&
-      `
-        width: 50vw;
+      ${isOpenMenu && `
+        width: 35%;
         visibility: visible;
+        overflow-x; auto;
       `}
-    }
   `}
 `;
