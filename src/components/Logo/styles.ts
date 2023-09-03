@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const Logo = styled.span`
+export const Logo = styled.a`
    font-weight: 900;
    font-size: 2rem;
 `;

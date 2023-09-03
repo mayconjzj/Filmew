@@ -2,6 +2,9 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.article`
   ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
   `}
 `;
 
@@ -16,12 +19,5 @@ export const Movies = styled.section`
     display: flex;
     overflow-x: auto;
     gap: 5px;
-  `}
-`;
-
-export const Category = styled.h2`
-  ${({ theme }) => css`
-    font-size: 18px;
-    font-weight: 600;
   `}
 `;
