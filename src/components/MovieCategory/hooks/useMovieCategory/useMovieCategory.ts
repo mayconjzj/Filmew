@@ -6,7 +6,7 @@ export const useMovieCategory = ({ category }: MovieCategoryProps) => {
   const [movies, setMovies] = useState([]);
 
   const getApi = async () => {
-    const { results } = await getData(`/genre/${category.id}/movies`);
+    const { results } = await getData(`/genre/${category.id}/movies`, { language: 'pt' });
     setMovies(results);
   };
 
