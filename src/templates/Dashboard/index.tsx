@@ -12,7 +12,7 @@ export async function getStaticProps() {
 }
 
 export const Dashboard = ({ genres }: any) => {
-  if(!genres) return;
+  if(!genres) return <p>loading...</p>
 
   return (
     <>
