@@ -1,24 +1,16 @@
 import { MovieCategory } from '@/components/MovieCategory';
-import { getData } from '@/services/api';
+import { useDashboard } from '@/hooks';
 
 import * as S from './styles';
 
-export async function getStaticProps() {
-  const { genres } = await getData('/genre/movie/list', { language: 'pt' });
-
-  return {
-    props: { genres }
-  };
-}
-
-export const Dashboard = ({ genres }: any) => {
-  if(!genres) return <p>loading...</p>
+export const Dashboard = () => {
+  const { categories } = useDashboard();
 
   return (
     <>
       <S.Container>
-        {genres.map((genre: { id: string; name: string }) => (
-          <MovieCategory key={genre.id} category={genre} />
+        {categories.map((category: { id: string; name: string }) => (
+          <MovieCategory key={category.id} category={category} />
         ))}
       </S.Container>
     </>
