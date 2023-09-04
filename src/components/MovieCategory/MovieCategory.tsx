@@ -1,6 +1,6 @@
 import { MovieCategoryProps } from '@/models';
-import { CardMovie } from './components';
-import { useMovieCategory } from './hooks/useMovieCategory';
+import { CardMovie } from '@/components/CardMovie';
+import { useMovieCategory } from './hooks';
 
 import * as S from './styles';
 
