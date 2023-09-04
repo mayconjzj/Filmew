@@ -3,4 +3,4 @@ export type MovieCategoryProps = {
     name: string;
     id: string;
   };
-}
+};

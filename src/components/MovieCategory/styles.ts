@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const Category = styled.h2`
   font-size: 16px;
@@ -12,7 +12,14 @@ export const Movies = styled.section`
 `;
 
 export const Content = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    transition: ${theme.transition.default};
+
+    &:hover {
+      transform: scale(1.01);
+    }
+  `}
 `;

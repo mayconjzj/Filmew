@@ -27,7 +27,7 @@ export const getData = async (
     const response = await fetch(apiUrl);
 
     if (!response.ok) {
-      throw new Error('Falha na requisição à API do TMDb');
+      throw new Error('Falha na requisição à API do TMDB');
     }
 
     const data = await response.json();

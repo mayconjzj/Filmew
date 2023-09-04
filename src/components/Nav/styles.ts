@@ -10,7 +10,7 @@ export const Nav = styled.nav`
 
 export const Content = styled.div`
   display: none;
-  z-index: 1;
+  z-index: 2;
 
   @media (max-width: 600px) {
     display: block;
@@ -20,6 +20,7 @@ export const Content = styled.div`
 export const NavMobile = styled.nav<{ isOpenMenu: boolean }>`
   ${({ isOpenMenu, theme }) => css`
     display: none;
+    z-index: 1;
 
     @media (max-width: 600px) {
       display: flex;
@@ -35,10 +36,11 @@ export const NavMobile = styled.nav<{ isOpenMenu: boolean }>`
       right: 0;
       top: 0;
       width: 0;
+      height: 100vh;
       transition: ${theme.transition.default};
 
       ${isOpenMenu && `
-        width: 35%;
+        width: 50%;
         visibility: visible;
         overflow-x; auto;
       `}

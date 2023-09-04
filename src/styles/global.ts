@@ -6,7 +6,7 @@ ${({ theme }: { theme: Theme }) => css`
   * {
     margin: 0;
     padding: 0;
-    border-box: box-sizing;
+    box-sizing: border-box;
     font-family: 'Montserrat';
   }
 

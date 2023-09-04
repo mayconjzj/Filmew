@@ -7,12 +7,16 @@ export const NavConfig: NavType = {
       href: '/'
     },
     {
-      title: 'Sobre',
-      href: '/about'
+      title: 'Populares',
+      href: '/1'
     },
     {
-      title: 'Contato',
-      href: '/contact'
+      title: 'Recomendados',
+      href: '/2'
+    },
+    {
+      title: 'Lançamentos',
+      href: '/3'
     }
   ]
 };
