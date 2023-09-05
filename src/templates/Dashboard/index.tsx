@@ -1,16 +1,17 @@
-import { MovieCategory } from '@/components/MovieCategory';
-import { useDashboard } from '@/hooks';
+import { MovieGenre} from '@/components/MovieGenre';
+import { useDashboard } from './useDashboard';
 
 import * as S from './styles';
 
 export const Dashboard = () => {
-  const { categories } = useDashboard();
+  const { genres, isLoading } = useDashboard();
 
   return (
     <>
       <S.Container>
-        {categories.map((category: { id: string; name: string }) => (
-          <MovieCategory key={category.id} category={category} />
+        {isLoading && <p>Carrengando...</p>}
+        {genres.map((genre: { id: string; name: string }) => (
+          <MovieGenre key={genre.id} genre={genre} />
         ))}
       </S.Container>
     </>

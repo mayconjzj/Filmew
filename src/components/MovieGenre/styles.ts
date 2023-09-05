@@ -23,3 +23,7 @@ export const Content = styled.section`
     }
   `}
 `;
+
+export const Loading = styled.p`
+  text-align: center;
+`;

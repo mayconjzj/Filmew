@@ -1,16 +1,17 @@
-import { MovieCategoryProps } from '@/models';
+import { MovieGenreProps } from '@/models';
 import { CardMovie } from '@/components/CardMovie';
-import { useMovieCategory } from './hooks';
+import { useMovieGenre } from './hooks';
 
 import * as S from './styles';
 
-export const MovieCategory = ({ category }: MovieCategoryProps) => {
-  const { movies } = useMovieCategory({ category: category });
+export const MovieGenre = ({ genre }: MovieGenreProps) => {
+  const { movies, isLoading } = useMovieGenre({ genre: genre });
 
   return (
     <>
       <S.Content>
-        <S.Category>{category.name}</S.Category>
+        {isLoading && <S.Loading>Carregando...</S.Loading>}
+        <S.Category>{genre.name}</S.Category>
         <S.Movies>
           {movies.map((movie: { id: string; title: string }) => (
             <CardMovie key={movie.id} movie={movie} />

@@ -1,0 +1,1 @@
+export { MovieGenre } from './MovieGenre';
