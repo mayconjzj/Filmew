@@ -1,6 +1,6 @@
-import { NavType } from '@/models';
+import { MainNavType } from '@/models';
 
-export const NavConfig: NavType = {
+export const MainNavConfig: MainNavType = {
   items: [
     {
       title: 'Home',

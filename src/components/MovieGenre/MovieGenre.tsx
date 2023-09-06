@@ -11,7 +11,9 @@ export const MovieGenre = ({ genre }: MovieGenreProps) => {
     <>
       <S.Content>
         {isLoading && <S.Loading>Carregando...</S.Loading>}
+
         <S.Category>{genre.name}</S.Category>
+
         <S.Movies>
           {movies.map((movie: { id: string; title: string }) => (
             <CardMovie key={movie.id} movie={movie} />

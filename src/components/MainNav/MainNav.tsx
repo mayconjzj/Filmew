@@ -1,12 +1,12 @@
 import { List, ListItem } from '@/components/List';
 import { Link } from '@/components/Link';
-import { NavType } from '@/models';
+import { MainNavType } from '@/models';
 import { ToggleButton, ListMobile } from './components';
 import { useNav } from './hooks';
 
 import * as S from './styles';
 
-export const Nav = ({ items }: NavType) => {
+export const MainNav = ({ items }: MainNavType) => {
   const { isOpenMenu, handleToggleMenu } = useNav();
 
   return (
