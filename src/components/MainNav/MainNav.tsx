@@ -1,5 +1,6 @@
 import { Link } from '@/components/Link';
 import { List, ListItem } from '@/components/List';
+import { Search } from '@/components/Search';
 
 import { MainNavType } from '@/models';
 
@@ -30,13 +31,6 @@ export const MainNav = ({ items }: MainNavType) => {
       </S.Content>
 
       <S.NavMobile isOpenMenu={isOpenMenu}>
-        <S.Content>
-          <ToggleButton
-            isOpenMenu={isOpenMenu}
-            handleToggleMenu={handleToggleMenu}
-          />
-        </S.Content>
-
         <ListMobile>
           {items.map((item) => (
             <ListItem key={item.title}>

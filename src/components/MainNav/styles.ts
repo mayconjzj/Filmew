@@ -3,20 +3,19 @@ import styled, { css } from 'styled-components';
 import theme from '@/styles/theme';
 
 export const Nav = styled.nav`
-  display: block;
+  display: flex;
+  align-items: center;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
 
 export const Content = styled.div`
   display: none;
-  position: absolute;
-  top: 20px;
-  right: 15px;
+  z-index: 2;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     display: block;
   }
 `;
@@ -26,7 +25,7 @@ export const NavMobile = styled.nav<{ isOpenMenu: boolean }>`
     display: none;
     z-index: 1;
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       display: flex;
       visibility: hidden;
       overflow-x: hidden;
