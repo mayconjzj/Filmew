@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+
 import theme from '@/styles/theme';
 
 export const Logo = styled.a`

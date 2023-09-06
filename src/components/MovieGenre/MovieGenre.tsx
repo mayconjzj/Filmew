@@ -1,13 +1,12 @@
 import { CardMovie } from '@/components/CardMovie';
 import { Loading } from '@/components/Loading';
 
+import { GenreProps } from '@/models';
+
 import { useMovieGenre } from './hooks';
-
-import { MovieGenreProps } from '@/models';
-
 import * as S from './styles';
 
-export const MovieGenre = ({ genre }: MovieGenreProps) => {
+export const MovieGenre = ({ genre }: { genre: GenreProps }) => {
   const { movies, isLoading } = useMovieGenre({ genre: genre });
 
   return (

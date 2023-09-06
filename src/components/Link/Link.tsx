@@ -1,6 +1,7 @@
 import NextLink from 'next/link';
-import { LinkProps } from '@/models';
 import { useRouter } from 'next/router';
+
+import { LinkProps } from '@/models';
 
 import * as S from './styles';
 

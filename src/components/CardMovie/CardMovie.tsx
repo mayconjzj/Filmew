@@ -1,7 +1,8 @@
-import { CardMovieProps } from '@/models';
+import { MovieProps } from '@/models';
+
 import * as S from './styles';
 
-export const CardMovie = ({ movie }: CardMovieProps) => {
+export const CardMovie = ({ movie }: MovieProps) => {
   const API_IMAGE = process.env.API_IMAGE;
 
   return (

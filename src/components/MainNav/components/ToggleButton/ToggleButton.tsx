@@ -1,4 +1,5 @@
 import { FaBars, FaTimes } from 'react-icons/fa';
+
 import { ToggleButtonProps } from '@/models';
 
 import * as S from './styles';

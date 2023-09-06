@@ -2,52 +2,78 @@
   "env": {
     "browser": true,
     "es2021": true,
-    "jest": true,
     "node": true
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:prettier/recommended"
   ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "overrides": [],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
-    "ecmaVersion": 12,
+    "ecmaVersion": "latest",
     "sourceType": "module"
   },
+  "ignorePatterns": ["**/*.css", ".snap"],
   "plugins": ["react", "@typescript-eslint", "react-hooks", "import-helpers"],
   "rules": {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
+    "react-hooks/exhaustive-deps": "off",
+    "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off", // para trabalhar com NextJS apenas
+    "reeact-hooks/rules-of-hooks": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "import/no-cycle": "off",
+    "camelcase": "off",
+    "jsx-a11y/heading-has-content": "off",
+    "jsx-a11y/anchor-has-content": "off",
+    "jsx-a11y/iframe-has-title": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
+    "prettier/prettier": [
+      "off",
+      {
+        "trailingComma": "none",
+        "semi": true,
+        "singleQuote": true,
+        "pluginSearchDirs": false
+      }
+    ],
     "import-helpers/order-imports": [
       "warn",
       {
         "newlinesBetween": "always", // Cria uma nova linha para separar as importacoes
         "groups": [
           ["/^react/", "/^next/"],
+          "/^@testing-library/react/",
+          "/^contentlayer/",
+          "/^fs/",
+          "/^disqus-react/",
           "module",
           "/^@shared/",
           "absolute",
-          "/^components/",
-          "/^pages/",
+          "/^@/components/",
+          "/^@/pages/",
           "/utils/",
-          "/constants/",
-          "/^store/",
-          "/^styles/",
-          "/^templates/",
+          "/^@/models/",
+          "/^@/store/",
+          "/^@/lib/",
+          "/^@/styles/",
+          "/^@/templates/",
           ["parent", "sibling", "index"]
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }

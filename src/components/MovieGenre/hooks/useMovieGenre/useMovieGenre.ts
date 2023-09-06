@@ -1,6 +1,8 @@
-import { MovieGenreProps } from '@/models';
-import { getData } from '@/services/api';
 import { useState, useEffect } from 'react';
+
+import { getData } from '@/services/api';
+
+import { MovieGenreProps } from '@/models';
 
 export const useMovieGenre = ({ genre }: MovieGenreProps) => {
   const [movies, setMovies] = useState([]);

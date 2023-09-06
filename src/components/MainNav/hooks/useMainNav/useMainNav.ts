@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 
-export const useNav = () => {
+export const useMainNav = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const handleToggleMenu = useCallback(() => {

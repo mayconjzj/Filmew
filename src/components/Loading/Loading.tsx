@@ -1,5 +1,6 @@
-import theme from '@/styles/theme';
 import BeatLoader from 'react-spinners/BeatLoader';
+
+import theme from '@/styles/theme';
 
 import * as S from './styles';
 

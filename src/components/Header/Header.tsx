@@ -1,6 +1,7 @@
+import { MainNavConfig } from '@/config';
+
 import { Logo } from '@/components/Logo';
 import { MainNav } from '@/components/MainNav';
-import { MainNavConfig } from '@/config';
 
 import * as S from './styles';
 
@@ -9,7 +10,7 @@ export const Header = () => {
     <>
       <S.Container>
         <Logo />
-        <MainNav items={MainNavConfig.items} /> 
+        <MainNav items={MainNavConfig.items} />
       </S.Container>
     </>
   );

@@ -1,5 +1,6 @@
-import theme from '@/styles/theme';
 import styled, { css } from 'styled-components';
+
+import theme from '@/styles/theme';
 
 export const Nav = styled.nav`
   display: block;
