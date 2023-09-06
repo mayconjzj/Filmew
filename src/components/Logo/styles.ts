@@ -1,16 +1,15 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
+import theme from '@/styles/theme';
 
 export const Logo = styled.a`
-   font-weight: 900;
-   font-size: 2rem;
+  font-weight: 900;
+  font-size: 2rem;
 `;
 
 export const W = styled.span`
-  ${({ theme }) => css`
-    color: ${theme.colors.yellow};
-  `}
+  color: ${theme.colors.yellow};
 `;
 
-export const Container= styled.div`
-  
+export const Container = styled.div`
+  cursor: pointer;
 `;

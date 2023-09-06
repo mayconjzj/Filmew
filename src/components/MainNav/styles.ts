@@ -1,3 +1,4 @@
+import theme from '@/styles/theme';
 import styled, { css } from 'styled-components';
 
 export const Nav = styled.nav`
@@ -10,7 +11,9 @@ export const Nav = styled.nav`
 
 export const Content = styled.div`
   display: none;
-  z-index: 2;
+  position: absolute;
+  top: 20px;
+  right: 15px;
 
   @media (max-width: 600px) {
     display: block;
@@ -18,7 +21,7 @@ export const Content = styled.div`
 `;
 
 export const NavMobile = styled.nav<{ isOpenMenu: boolean }>`
-  ${({ isOpenMenu, theme }) => css`
+  ${({ isOpenMenu }) => css`
     display: none;
     z-index: 1;
 
@@ -26,7 +29,7 @@ export const NavMobile = styled.nav<{ isOpenMenu: boolean }>`
       display: flex;
       visibility: hidden;
       overflow-x: hidden;
-      position: absolute;
+      position: fixed;
       background-color: ${theme.colors.black2};
       padding: ${theme.box.padding};
       padding-top: 25px;
@@ -36,13 +39,17 @@ export const NavMobile = styled.nav<{ isOpenMenu: boolean }>`
       right: 0;
       top: 0;
       width: 0;
+      opacity: 0;
       height: 100vh;
       transition: ${theme.transition.default};
 
-      ${isOpenMenu && `
-        width: 50%;
-        visibility: visible;
-        overflow-x; auto;
-      `}
+      ${isOpenMenu &&
+      `
+      width: 50%;
+      visibility: visible;
+      overflow-x; auto;
+      opacity: 1;
+    `}
+    }
   `}
 `;

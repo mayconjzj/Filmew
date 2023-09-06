@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import theme from '@/styles/theme';
 
 export const Category = styled.h2`
   font-size: 16px;
@@ -12,16 +13,14 @@ export const Movies = styled.section`
 `;
 
 export const Content = styled.section`
-  ${({ theme }) => css`
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    transition: ${theme.transition.default};
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: ${theme.transition.default};
 
-    &:hover {
-      transform: scale(1.01);
-    }
-  `}
+  &:hover {
+    transform: scale(1.01);
+  }
 `;
 
 export const Loading = styled.p`
