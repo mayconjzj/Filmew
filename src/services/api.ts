@@ -1,18 +1,28 @@
 const API_URL = process.env.API_URL;
 const API_KEY = process.env.API_KEY;
 
+type DefaultParamsProps = {
+  api_key?: string;
+  [key: string]: string | number | undefined;
+};
+
 const buildApiUrl = (
   endpoint: string,
   queryParams: Record<string, string | number> = {}
 ) => {
   const url = new URL(`${API_URL}${endpoint}`);
-  const defaultParams: any = {
+  const defaultParams: DefaultParamsProps = {
     api_key: API_KEY,
-    ...queryParams,
+    ...queryParams
   };
 
   for (const key in defaultParams) {
-    url.searchParams.append(key, defaultParams[key].toString());
+    if (Object.prototype.hasOwnProperty.call(defaultParams, key)) {
+      const value = defaultParams[key];
+      if (value !== undefined) {
+        url.searchParams.append(key, value.toString());
+      }
+    }
   }
 
   return url.toString();

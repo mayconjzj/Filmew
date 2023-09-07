@@ -4,19 +4,19 @@ export const MainNavConfig: MainNavType = {
   items: [
     {
       title: 'Home',
-      href: '/',
+      href: '/'
     },
     {
       title: 'Populares',
-      href: '/1',
+      href: '/1'
     },
     {
       title: 'Recomendados',
-      href: '/2',
+      href: '/2'
     },
     {
       title: 'Lançamentos',
-      href: '/3',
-    },
-  ],
+      href: '/3'
+    }
+  ]
 };

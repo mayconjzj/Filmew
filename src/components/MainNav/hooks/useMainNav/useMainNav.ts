@@ -9,6 +9,6 @@ export const useMainNav = () => {
 
   return {
     isOpenMenu,
-    handleToggleMenu,
+    handleToggleMenu
   };
 };

@@ -1,6 +1,5 @@
 import { Link } from '@/components/Link';
 import { List, ListItem } from '@/components/List';
-import { Search } from '@/components/Search';
 
 import { MainNavType } from '@/models';
 

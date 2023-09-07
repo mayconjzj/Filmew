@@ -43,6 +43,7 @@
     "jsx-a11y/heading-has-content": "off",
     "jsx-a11y/anchor-has-content": "off",
     "jsx-a11y/iframe-has-title": "off",
+    "no-useless-catch": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "prettier/prettier": [
       "error",

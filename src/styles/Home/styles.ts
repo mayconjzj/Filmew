@@ -1,21 +1,15 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Container = styled.article`
-  ${({ theme }) => css`
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-  `}
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 `;
 
-export const Content = styled.section`
-  ${({ theme }) => css``}
-`;
+export const Content = styled.section``;
 
 export const Movies = styled.section`
-  ${({ theme }) => css`
-    display: flex;
-    overflow-x: auto;
-    gap: 5px;
-  `}
+  display: flex;
+  overflow-x: auto;
+  gap: 5px;
 `;
