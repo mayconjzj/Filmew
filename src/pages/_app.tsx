@@ -18,7 +18,7 @@ function App({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         ></link>
       </Head>
-      
+
       <ThemeProvider theme={theme}>
         <Layout>
           <Component {...pageProps} />

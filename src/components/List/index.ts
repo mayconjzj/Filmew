@@ -1,2 +1,2 @@
-export { List } from './List'
+export { List } from './List';
 export { ListItem } from './components';

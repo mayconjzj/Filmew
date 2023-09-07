@@ -12,7 +12,7 @@ export const useMovieGenre = ({ genre }: MovieGenreProps) => {
     setIsLoading(true);
 
     const { results } = await getData(`/genre/${genre.id}/movies`, {
-      language: 'pt'
+      language: 'pt',
     });
 
     setMovies(results);
@@ -25,6 +25,6 @@ export const useMovieGenre = ({ genre }: MovieGenreProps) => {
 
   return {
     movies,
-    isLoading
+    isLoading,
   };
 };

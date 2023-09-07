@@ -8,7 +8,7 @@ const buildApiUrl = (
   const url = new URL(`${API_URL}${endpoint}`);
   const defaultParams: any = {
     api_key: API_KEY,
-    ...queryParams
+    ...queryParams,
   };
 
   for (const key in defaultParams) {

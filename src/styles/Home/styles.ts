@@ -9,9 +9,7 @@ export const Container = styled.article`
 `;
 
 export const Content = styled.section`
-  ${({ theme }) => css`
-  
-  `}
+  ${({ theme }) => css``}
 `;
 
 export const Movies = styled.section`

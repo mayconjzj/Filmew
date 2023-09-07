@@ -6,7 +6,7 @@ import * as S from './styles';
 
 export const ToggleButton = ({
   isOpenMenu = false,
-  handleToggleMenu
+  handleToggleMenu,
 }: ToggleButtonProps) => {
   const title = isOpenMenu ? 'Fechar' : 'Abrir';
 
@@ -19,4 +19,3 @@ export const ToggleButton = ({
     </>
   );
 };
- 
