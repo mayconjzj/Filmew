@@ -2,9 +2,9 @@ import { useState, useEffect, useCallback } from 'react';
 
 import { getData } from '@/services/api';
 
-import { MovieGenreProps } from '@/models';
+import { GenreProps } from '@/models';
 
-export const useMovieGenre = ({ genre }: MovieGenreProps) => {
+export const useMovieGenre = ({ genre }: { genre: GenreProps }) => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
