@@ -6,3 +6,5 @@ export const Movies = styled.section`
   row-gap: 1rem;
   justify-content: space-around;
 `;
+
+export const Container = styled.article``;
