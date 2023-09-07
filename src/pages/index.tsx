@@ -1,15 +1,18 @@
 import { getData } from '@/services/api';
 
 import { MovieGenre } from '@/components/MovieGenre';
+import { Search } from '@/components/Search';
 
-import { GenresProps } from '@/models';
+import { GenreProps } from '@/models';
 
-import * as S from '@/styles/Home';
+import * as S from './styles';
 
-export default function Home({ genres }: GenresProps) {
+//RETORNA O RESUTADO DA BUSCA NA API
+export default function Home({ genres }: { genres: GenreProps[] }) {
   return (
     <>
       <S.Container>
+        <Search />
         {genres.map((genre: { id: string; name: string }) => (
           <MovieGenre key={genre.id} genre={genre} />
         ))}
@@ -18,6 +21,7 @@ export default function Home({ genres }: GenresProps) {
   );
 }
 
+//BUSCA AS CATEGORIAS DE FILMES DISPONÍVEIS NA API
 export const getServerSideProps = async () => {
   const { genres } = await getData('/genre/movie/list', { language: 'pt' });
 

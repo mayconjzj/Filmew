@@ -2,10 +2,9 @@ import styled from 'styled-components';
 
 import theme from '@/styles/theme';
 
-export const Search = styled.div`
+export const Search = styled.form`
   display: flex;
   align-items: center;
-  margin: 0 15px;
   height: 40px;
   border: 1px solid white;
   border-radius: 5px;
@@ -13,9 +12,12 @@ export const Search = styled.div`
   justify-content: space-around;
 `;
 
-export const Icon = styled.label`
+export const Icon = styled.button`
   font-size: 20px;
   display: flex;
+  background-color: transparent;
+  border: none;
+  color: ${theme.colors.white};
 `;
 
 export const Input = styled.input`
