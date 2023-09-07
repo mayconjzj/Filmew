@@ -6,7 +6,7 @@ import { CardMovie } from '@/components/CardMovie';
 
 import { MovieProps } from '@/models';
 
-import * as S from './styles';
+import * as S from '@/styles/Home';
 
 //RETORNA O RESUTADO DA BUSCA NA API
 export default function Results({ results }: { results: MovieProps[] }) {
