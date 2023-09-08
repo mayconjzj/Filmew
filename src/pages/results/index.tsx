@@ -4,8 +4,10 @@ import { getData } from '@/services/api';
 
 import { MovieProps } from '@/models';
 
+import { Results } from '@/templates/Dashboard/results';
+
 //RETORNA O RESUTADO DA BUSCA NA API
-export default function Results({ results }: { results: MovieProps[] }) {
+export default function Page({ results }: { results: MovieProps[] }) {
   return <Results results={results} />;
 }
 

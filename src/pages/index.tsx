@@ -5,7 +5,7 @@ import { GenreProps } from '@/models';
 import { Dashboard } from '@/templates/Dashboard';
 
 //RETORNA O RESUTADO DA BUSCA NA API
-export default function Home({ genres }: { genres: GenreProps[] }) {
+export default function Page({ genres }: { genres: GenreProps[] }) {
   return <Dashboard genres={genres} />;
 }
 
