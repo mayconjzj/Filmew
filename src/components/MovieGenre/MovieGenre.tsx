@@ -16,10 +16,10 @@ export const MovieGenre = ({ genre }: { genre: GenreProps }) => {
 
         <S.Movies>
           {isLoading && <Loading loading={isLoading} />}
-
-          {movies.map((movie: { id: string; title: string }) => (
-            <CardMovie key={movie.id} movie={movie} />
-          ))}
+          {!isLoading &&
+            movies.map((movie: { id: string; title: string }) => (
+              <CardMovie key={movie.id} movie={movie} />
+            ))}
         </S.Movies>
       </S.Content>
     </>

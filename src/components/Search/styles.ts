@@ -5,7 +5,6 @@ import theme from '@/styles/theme';
 export const Search = styled.form`
   display: flex;
   align-items: center;
-  height: 40px;
   border: 1px solid white;
   border-radius: 5px;
   width: 220px;
@@ -24,5 +23,6 @@ export const Input = styled.input`
   background-color: transparent;
   border: none;
   outline: none;
+  height: 40px;
   color: ${theme.colors.white};
 `;

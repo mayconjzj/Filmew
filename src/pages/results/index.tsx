@@ -1,30 +1,33 @@
-import { GetServerSidePropsContext } from 'next';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 import { getData } from '@/services/api';
 
-import { MovieProps } from '@/models';
-
 import { Results } from '@/templates/Dashboard/results';
 
-//RETORNA O RESUTADO DA BUSCA NA API
-export default function Page({ results }: { results: MovieProps[] }) {
-  return <Results results={results} />;
-}
-
-//BUSCA FILMES NA API
-export const getServerSideProps = async (
-  context: GetServerSidePropsContext
-) => {
-  const { query } = context;
+export default function Page() {
+  //BUSCA OS FILMES NA API
+  const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+  const { query } = router;
   const { search, language } = query;
 
-  const { results } = await getData(`/search/movie?query=${search}`, {
-    language: `${language}`
-  });
+  const getMovies = async () => {
+    setIsLoading(true);
+    const { results } = await getData(`/search/movie`, {
+      language: `${language}`,
+      query: `${search}`
+    });
 
-  return {
-    props: {
-      results
-    }
+    setIsLoading(false);
+    setMovies(results);
   };
-};
+
+  useEffect(() => {
+    getMovies();
+  }, [search, language]);
+
+  //RETORNA UM COMPONENTE JÁ COM OS FILMES
+  return <Results movies={movies} loading={isLoading} search={search} />;
+}
