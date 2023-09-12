@@ -8,15 +8,15 @@ export const MainNavConfig: MainNavType = {
     },
     {
       title: 'Populares',
-      href: '/1'
+      href: '/popularity?language=pt'
     },
     {
-      title: 'Recomendados',
-      href: '/2'
+      title: 'Recomandados',
+      href: '/recommended'
     },
     {
       title: 'Lançamentos',
-      href: '/3'
+      href: '/releases'
     }
   ]
 };
