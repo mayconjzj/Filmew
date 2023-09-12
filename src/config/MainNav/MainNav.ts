@@ -12,11 +12,11 @@ export const MainNavConfig: MainNavType = {
     },
     {
       title: 'Recomandados',
-      href: '/recommended'
+      href: '/recommended?language=pt'
     },
     {
       title: 'Lançamentos',
-      href: '/releases'
+      href: '/releases?language=pt'
     }
   ]
 };

@@ -20,3 +20,7 @@ export const CardMovie = styled.div`
 export const CardImage = styled.img`
   width: 100%;
 `;
+
+export const NoPoster = styled.div`
+  margin: auto;
+`;

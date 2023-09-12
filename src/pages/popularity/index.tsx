@@ -16,7 +16,8 @@ export default function Page() {
   const getMovies = async () => {
     setIsLoading(true);
     const { results } = await getData(`/discover/movie`, {
-      language: `${language}`
+      language: `${language}`,
+      sort_by: `popularity.desc`
     });
 
     setIsLoading(false);
