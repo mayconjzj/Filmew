@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { MovieProps } from '@/models';
 
 import * as S from './styles';
@@ -10,15 +12,17 @@ export const CardMovie = ({ movie }: { movie: MovieProps }) => {
 
   return (
     <>
-      <S.CardMovie>
-        {hasPoster && (
-          <S.CardImage
-            src={`${API_IMAGE}${movie.poster_path}`}
-            alt={`Capa do filme ${movie.original_title}`}
-          />
-        )}
-        {!hasPoster && <S.NoPoster>{movie.original_title}</S.NoPoster>}
-      </S.CardMovie>
+      <Link href={`movie/${movie.id}?language=pt`} legacyBehavior>
+        <S.CardMovie>
+          {hasPoster && (
+            <S.CardImage
+              src={`${API_IMAGE}${movie.poster_path}`}
+              alt={`Capa do filme ${movie.title}`}
+            />
+          )}
+          {!hasPoster && <S.NoPoster>{movie.title}</S.NoPoster>}
+        </S.CardMovie>
+      </Link>
     </>
   );
 };

@@ -13,7 +13,8 @@ export default {
     black: '#000',
     black2: '#090909',
     gray: '#101010',
-    yellow: '#ffdd00'
+    yellow: '#ffdd00',
+    red: '#ee2020'
   },
 
   transition: {

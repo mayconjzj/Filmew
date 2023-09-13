@@ -23,4 +23,6 @@ export const CardImage = styled.img`
 
 export const NoPoster = styled.div`
   margin: auto;
+  text-decoration: none;
+  height: 234px;
 `;
