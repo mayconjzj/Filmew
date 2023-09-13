@@ -21,7 +21,7 @@ export const Recommended = ({
         <S.Movies>
           {loading && <Loading loading={loading} />}
           {!loading &&
-            movies.map((movie: { id: string; original_title: string }) => (
+            movies.map((movie: MovieProps) => (
               <CardMovie key={movie.id} movie={movie} />
             ))}
         </S.Movies>
