@@ -21,7 +21,7 @@ export const Releases = ({
         <S.Movies>
           {loading && <Loading loading={loading} />}
           {!loading &&
-            movies.map((movie: { id: string; title: string }) => (
+            movies.map((movie: { id: string; original_title: string }) => (
               <CardMovie key={movie.id} movie={movie} />
             ))}
         </S.Movies>
