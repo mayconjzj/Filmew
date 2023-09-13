@@ -1,5 +1,5 @@
 export type MovieProps = {
-  title: string;
+  original_title: string;
   id: string;
   poster_path?: string;
 };

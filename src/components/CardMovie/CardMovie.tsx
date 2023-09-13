@@ -14,10 +14,10 @@ export const CardMovie = ({ movie }: { movie: MovieProps }) => {
         {hasPoster && (
           <S.CardImage
             src={`${API_IMAGE}${movie.poster_path}`}
-            alt={`Capa do filme ${movie.title}`}
+            alt={`Capa do filme ${movie.original_title}`}
           />
         )}
-        {!hasPoster && <S.NoPoster>{movie.title}</S.NoPoster>}
+        {!hasPoster && <S.NoPoster>{movie.original_title}</S.NoPoster>}
       </S.CardMovie>
     </>
   );
