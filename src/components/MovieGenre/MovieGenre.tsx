@@ -17,7 +17,7 @@ export const MovieGenre = ({ genre }: { genre: GenreProps }) => {
         <S.Movies>
           {isLoading && <Loading loading={isLoading} />}
           {!isLoading &&
-            movies.map((movie: { id: string; title: string }) => (
+            movies.map((movie: { id: string; original_title: string }) => (
               <CardMovie key={movie.id} movie={movie} />
             ))}
         </S.Movies>
