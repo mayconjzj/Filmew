@@ -1,7 +1,7 @@
 import { CardMovie } from '@/components/CardMovie';
 import { Loading } from '@/components/Loading';
 
-import { GenreProps } from '@/models';
+import { GenreProps, MovieProps } from '@/models';
 
 import { useMovieGenre } from './hooks';
 import * as S from './styles';
@@ -17,7 +17,7 @@ export const MovieGenre = ({ genre }: { genre: GenreProps }) => {
         <S.Movies>
           {isLoading && <Loading loading={isLoading} />}
           {!isLoading &&
-            movies.map((movie: { id: string; title: string }) => (
+            movies.map((movie: MovieProps) => (
               <CardMovie key={movie.id} movie={movie} />
             ))}
         </S.Movies>
